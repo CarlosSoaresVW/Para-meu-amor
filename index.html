@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosso Amor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #ffe6f2;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .question-button,
+      .question {
+        padding: 15px 20px;
+        font-size: 18px;
+        background-color: #ff4081;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px;
+        transition: 0.3s;
+      }
+      .question-button:hover,
+      .question:hover {
+        background-color: #d8366b;
+      }
+      .question-container {
+        display: none;
+        margin-top: 20px;
+      }
+      .answer {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 10px auto;
+      }
+      .image-container {
+        margin-top: 10px;
+      }
+      .image-container img {
+        max-width: 100%;
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="question-button" onclick="toggleQuestions()">
+        Descubra o porquê desse amor
+      </button>
+      <div class="question-container" id="questions">
+        <button class="question" onclick="toggleAnswer('answer1')">
+          O que faz a sua namorada ser única para você?
+        </button>
+        <div class="answer" id="answer1">
+          <p>
+            A reciprocidade e o companheirismo que ela tem comigo, desde que nos
+            conhecemos, não demorou muito para que ficássemos próximos como se
+            nos conhecêssemos há anos enquanto só tínhamos meses juntos. Fora o
+            fato de eu saber que ela faria tudo por mim, sobre eu saber que
+            posso contar com ela para toda e qualquer circunstância, é absurdo o
+            que sinto.
+          </p>
+          <div class="image-container">
+            <img src="img/foto resposta 1.png" alt="Imagem 1" />
+          </div>
+        </div>
+
+        <button class="question" onclick="toggleAnswer('answer2')">
+          Qual foi o momento mais especial que vocês já viveram juntos?
+        </button>
+        <div class="answer" id="answer2">
+          <p>
+            É difícil separar um momento marcante apenas, cada detalhe da nossa
+            rotina faz tudo ser maravilhoso, não desgrudamos nenhum dia sequer,
+            mas sem dúvidas o momento mais especial para mim foi a nossa
+            primeira viagem juntos. Alinhamos as férias e fomos para praia e ver
+            o olhar de deslumbre dela com a paisagem, o sorriso depois de cada
+            cenário ou bobeira que eu fizesse. Esse foi para mim o momento mais
+            especial, amo levar ela para conhecer lugares novos.
+          </p>
+          <div class="image-container">
+            <img src="img/foto resposta 2.png" alt="Imagem 2" />
+          </div>
+        </div>
+
+        <button class="question" onclick="toggleAnswer('answer3')">
+          Se você pudesse descrever seu amor por ela em uma única cena de filme,
+          como seria?
+        </button>
+        <div class="answer" id="answer3">
+          <p>
+            Eu poderia trazer diversas cenas, e até a história de um casal de
+            uma série que gostamos em comum (Chandler e Monica de Friends), mas
+            acredito que o que de fato se enquadra é não só a cena mas situação
+            de um filme do Adam Sandler, "Como Se Fosse a Primeira Vez", em que
+            ele se apaixona por uma mulher que sofreu um acidente e não se
+            lembra de nada a partir da data do acidente. Me vejo como o Adam
+            nesse caso, com o dever de fazer ela se apaixonar ou se sentir
+            apaixonada por mim todos os dias, seja com ações, coisas complexas
+            ou simples, mas o dever constante de mostrar para ela o quanto ela
+            me tem.
+          </p>
+          <div class="image-container">
+            <img src="img/foto resposta 3.png" alt="Imagem 3" />
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="img/foto pg.png" alt="Imagem principal" />
+      </div>
+    </div>
+
+    <script>
+      function toggleQuestions() {
+        var container = document.getElementById('questions')
+        container.style.display =
+          container.style.display === 'block' ? 'none' : 'block'
+      }
+
+      function toggleAnswer(id) {
+        var answer = document.getElementById(id)
+        answer.style.display =
+          answer.style.display === 'block' ? 'none' : 'block'
+      }
+    </script>
+  </body>
+</html>
